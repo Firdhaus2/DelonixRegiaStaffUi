@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {routing} from './app.routing';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'staffApp';
+
+  openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
 }

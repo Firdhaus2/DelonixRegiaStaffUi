@@ -1,11 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http'
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
 import { GRecordComponent } from './g-record/g-record.component';
 import { GRecordFormComponent } from './g-record-form/g-record-form.component';
 import { SRecordFormComponent } from './s-record-form/s-record-form.component';
@@ -24,37 +19,26 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 
 
-import { routing } from './app.routing';
+const appRoutes: Routes = [
+ { path: 'GRecord', component: GRecordComponent },
+ { path: 'GRecordForm', component: GRecordFormComponent },
+ { path: 'SRecordForm', component: SRecordFormComponent },
+ { path: 'SRecord', component: SRecordComponent },
+ { path: 'Home', component: HomeComponent },
+ { path: 'RoomService', component: RoomServiceComponent },
+ { path: 'BookRecord', component: BookRecordComponent },
+ { path: 'BookRecordForm', component: BookRecordFormComponent },
+ { path: 'Report', component: ReportComponent },
+ { path: 'PaymentInvoiceRecord', component: PaymentInvoiceRecordComponent },
+ { path: 'PaymentInvoiceForm', component: PaymentInvoiceFormComponent },
+ { path: 'GuestAccount', component: GuestAccountComponent },
+ { path: 'StaffAccount', component: StaffAccountComponent },
+ { path: 'StaffAccountForm', component: StaffAccountFormComponent },
+ { path: 'Login', component: LoginComponent },
+ { path: 'Logout', component: LogoutComponent },
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    GRecordComponent,
-    GRecordFormComponent,
-    SRecordFormComponent,
-    SRecordComponent,
-    HomeComponent,
-    RoomServiceComponent,
-    BookRecordComponent,
-    BookRecordFormComponent,
-    ReportComponent,
-    PaymentInvoiceRecordComponent,
-    PaymentInvoiceFormComponent,
-    GuestAccountComponent,
-    StaffAccountComponent,
-    StaffAccountFormComponent,
-    LoginComponent,
-    LogoutComponent
-  ],
-  imports: [
-    BrowserModule,
-    routing,
-    HttpClientModule,
-    HttpModule,
-    ReactiveFormsModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+
+ { path: '', component: LoginComponent, pathMatch: 'full'}
+];
+export const routing: ModuleWithProviders =
+RouterModule.forRoot(appRoutes);

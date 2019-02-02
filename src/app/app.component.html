@@ -1,21 +1,27 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="banner1">
+  <div style="position:absolute; margin-left:30px;margin-top:20px">
+  <a (click)="openNav()">
+    <img src="https://cdn.discordapp.com/attachments/530989871649652761/541242449121771540/icons8-menu-30.png">
+  </a>
+  </div>
+  <div align=center>
+    <img src="https://cdn.discordapp.com/attachments/212893004740952065/541237703518453760/Delonix_Regia_Logo_2.png" style="height:150px;">
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div style="padding-top:130px">
+<router-outlet></router-outlet>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a class="closebtn" (click)="closeNav()">&times;</a>
+  <a (click)="closeNav()" routerLink="/Home"><table><tr><td><img src="https://media.discordapp.net/attachments/212893004740952065/541265243800600576/HomeLogo.png" style="width:30px; margin-right:5px "></td><td>Dashboard</td></tr></table></a><hr style="width:230px">
+  <a (click)="closeNav()" routerLink="/GuestAccount"><table><tr><td><img src="https://cdn.discordapp.com/attachments/212893004740952065/541265240726306846/GuestAccountsLogo.png" style="width:30px; margin-right:5px "></td><td>Guest Accounts</td></tr></table></a>
+  <a (click)="closeNav()" routerLink="/StaffAccount"><table><tr><td><img src="https://cdn.discordapp.com/attachments/212893004740952065/541265249836204034/StaffAccountsLogo.png" style="width:30px; margin-right:5px "></td><td>Staff Accounts</td></tr></table></a><hr style="width:230px">
+  <a (click)="closeNav()" routerLink="/GRecord"><table><tr><td><img src="https://media.discordapp.net/attachments/212893004740952065/541265242399834114/GuestRecordsLogo.png" style="width:30px; margin-right:5px "></td><td>Guest Records</td></tr></table></a>
+  <a (click)="closeNav()" routerLink="/SRecord"><table><tr><td><img src="https://media.discordapp.net/attachments/212893004740952065/541265251769778207/StaffRecordsLogo.png" style="width:30px; margin-right:5px "></td><td>Staff Records</td></tr></table></a><hr style="width:230px">
+  <a (click)="closeNav()" routerLink="/PaymentInvoiceRecord"><table><tr><td><img src="https://media.discordapp.net/attachments/212893004740952065/541265247403638784/PaymentInvoiceLogo.png" style="width:30px; margin-right:5px "></td><td>Payment Invoice Records</td></tr></table></a><hr style="width:230px">
+  <a (click)="closeNav()" routerLink="/BookRecord"><table><tr><td><img src="https://cdn.discordapp.com/attachments/212893004740952065/541264717658980368/BookingRecordsLogo.png" style="width:30px; margin-right:5px "></td><td>Booking Records</td></tr></table></a><hr style="width:230px">
+  <a (click)="closeNav()" routerLink="/RoomService"><table><tr><td><img src="https://media.discordapp.net/attachments/212893004740952065/541265245583441940/HouseKeepingLogo.png" style="width:30px; margin-right:5px "></td><td>Housekeeping & Roomservice Records</td></tr></table></a><hr style="width:230px">
+  <a (click)="closeNav()" routerLink="/Report"><table><tr><td><img src="https://media.discordapp.net/attachments/212893004740952065/541265248850673685/ReportsLogo.png" style="width:30px; margin-right:5px "></td><td>Reports</td></tr></table></a>
+</div>
 
-<!-- helo? -->
+<!-- Use any element to open tde sidenav -->
