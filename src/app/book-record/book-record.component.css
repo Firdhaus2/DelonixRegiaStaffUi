@@ -1,0 +1,29 @@
+.header {
+    margin-top:40px;
+    margin-left:40px;
+
+}
+
+
+.container {
+    height:60vh;
+    margin-top: 20px;
+    width:85vh;
+    width:85%;
+
+}
+
+.panel {
+    border-radius: 0px;
+    width:100vh;
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+}
+
+.panel-body{
+    padding-right:50px;
+}
+
+.btn1 {
+    
+}
