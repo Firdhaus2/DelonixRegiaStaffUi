@@ -1,3 +1,31 @@
-<p>
-  payment-invoice-form works!
-</p>
+<div>
+  <h3 class="header">Booking Records Form</h3>
+  <br>
+  <div>
+    <form class="paymentRecordId">
+      <u>Cost of Stay</u>
+      <div class="form-group row">
+        <label for="additionalCosts" class="col-sm-2 col-form-label">Additional Costs</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="additionalCosts">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="modeOfPayment" class="col-sm-2 col-form-label">Mode of Payment</label>
+        <div class="col-sm-10">
+          <input type="radio" name="paymentType" id="modeOfPayment" value="credit">Credit Card
+          <br>
+          <input type="radio" name="paymentType" id="modeOfPayment" value="debit">Debit Card
+          <br>
+          <input type="radio" name="paymentType" id="modeOfPayment" value="cash">Cash
+          <br>
+        </div>
+      </div>
+      <div align=right>
+        <button type="button" class="btn btn-outline-danger  row-sm-10">Discard Changes</button>
+
+        <button type="button" class="btn btn-danger row-sm-10">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
