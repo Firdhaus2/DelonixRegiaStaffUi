@@ -1,3 +1,36 @@
-<p>
-  s-record-form works!
-</p>
+<div>
+    <h3 class="header">Staff Accounts Form</h3>
+    <div>
+        <h4 align=center>Staff Account ID: </h4>
+        <div class="sAccountId">
+            <form>
+                <u>Account Particulars</u>
+                <div class="form-group row">
+                    <label for="username" class="col-sm-2 col-form-label">Username</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="username">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="accountType" class="col-sm-2 col-form-label">Check-in Date and Time</label>
+                    <div class="col-sm-10">
+                        <input type="radio" class="form-control" id="accountType" name="accountType" value="admin">Admin<br>
+                        <input type="radio" class="form-control" id="accountType" name="accountType" value="management">Management<br>
+                        <input type="radio" class="form-control" id="accountType" name="accountType" value="staff">Staff<br>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                </div>
+                <div align=right>
+                    <button type="button" class="btn btn-outline-danger  row-sm-10">Discard Changes</button> 
+                    
+                    <button type="button" class="btn btn-danger row-sm-10">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
