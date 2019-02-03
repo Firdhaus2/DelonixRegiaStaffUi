@@ -1,0 +1,19 @@
+.header{
+    color: #282828;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.sRecordId{
+    width: 80%;
+    margin: auto;
+    border-width: 1px; 
+    border-color: black;
+    border-style: solid;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    color: #282828; 
+}
