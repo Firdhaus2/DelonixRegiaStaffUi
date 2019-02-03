@@ -1,0 +1,29 @@
+.header {
+    margin-top:40px;
+    margin-left:40px;
+
+}
+.panel {
+    border-radius: 0px;
+    width:100vh;
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+}
+
+.filter {
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+}
+
+.generateReport {
+    height: 60vh;
+    width: 40vh;
+
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+
+    margin-top:20px
+
+}
