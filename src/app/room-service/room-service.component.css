@@ -1,0 +1,49 @@
+.requestCol {
+    margin-top:50px;
+
+    border-width:1px;
+    border-style:solid;
+    border-color:black;
+
+    height:70vh;
+    
+}
+
+.requestCol1 {
+
+    border-width:1px;
+    border-style:solid;
+    border-color:black;
+
+    height:70vh;
+    width:75vh;   
+    margin:auto
+}
+
+.housekeepingCol{
+    margin-top:50px;
+
+    border-width:1px;
+    border-style:solid;
+    border-color:black;
+
+    height:70vh;
+    
+}
+
+table{
+    width:80vh;
+    margin:auto;
+
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align:center;
+  }
+
+th {
+    text-align: center;
+    width: 40vh
+}
