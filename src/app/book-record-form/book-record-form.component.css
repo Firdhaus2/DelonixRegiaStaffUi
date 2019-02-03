@@ -1,0 +1,21 @@
+.header{
+    color: #aa2e2e;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.recordId{
+    width: 80%;
+    margin: auto;
+    border-width: 1px; 
+    border-color: black;
+    border-style: solid;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    color: #aa2e2e; 
+}
+.buttonsRight{
+    
+}

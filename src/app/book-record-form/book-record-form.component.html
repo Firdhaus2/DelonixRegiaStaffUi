@@ -1,4 +1,48 @@
-<p>
-  book-record-form works!
-</p>
-<!--this is gay-->
+<div>
+    <h3 class="header">Booking Records Form</h3>
+    <div>
+        <h4 align=center>Booking Record ID: </h4>
+        <div class="recordId">
+            <form>
+                <u>Date and Time</u>
+                <div class="form-group row">
+                    <label for="bookingDate" class="col-sm-2 col-form-label">Booking Date</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="bookingDate">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="checkInDatetime" class="col-sm-2 col-form-label">Check-in Date and Time</label>
+                    <div class="col-sm-10">
+                        <input type="datetime-local" class="form-control" id="checkInDatetime">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="checkOutDatetime" class="col-sm-2 col-form-label">Check-out Date and Time</label>
+                    <div class="col-sm-10">
+                        <input type="datetime-local" class="form-control" id="checkOutDatetime">
+                    </div>
+                </div>
+                <hr style="background-color: black; width: 90%;">
+                <u>Additional Remarks</u>
+                <div class="form-group row">
+                    <label for="additionalRemarks" class="col-sm-2 col-form-label">Additional Remarks</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="addtionalRemarks" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="checkOutExtension" class="col-sm-2 col-form-label">Check-out Extension</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="checkOutExtension" placeholder="Check-out Extension">
+                    </div>
+                </div>
+                <div align=right>
+                    <button type="button" class="btn btn-outline-danger  row-sm-10">Discard Changes</button> 
+                    
+                    <button type="button" class="btn btn-danger row-sm-10">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
