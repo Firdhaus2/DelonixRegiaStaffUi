@@ -26,6 +26,7 @@ import {AuthserviceService} from './authservice.service'
 
 
 import { routing } from './app.routing';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { routing } from './app.routing';
     StaffAccountComponent,
     StaffAccountFormComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
