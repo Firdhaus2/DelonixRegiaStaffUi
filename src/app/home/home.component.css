@@ -1,40 +1,21 @@
 .homeBox{
     margin-top: 40px;
 }
-.box1{
-    border-color: black;
+.box{
+    border-color: white;
     border-style: solid;
     border-width: 1px;
     padding: 20px 20px 20px 20px;
     margin: auto;
     margin-left: 40px;
     margin-right: 40px;
-    margin-top: 20px;
+    margin-top: 100px;
     height: 260px;
+    box-shadow: 2px 2px 12px gray;
 
 }
-.box2{
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    padding: 20px 20px 20px 20px;
-    margin: auto;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 20px;
-    height: 260px;
-}
-.box3{
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    padding: 20px 20px 20px 20px;
-    margin: auto;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 20px;
-    height: 260px;
-}
+
+
 .notifBox{
     border-color: gray;
     border-style: solid;

@@ -19,11 +19,11 @@ MongoClient.connect('mongodb://admin:password1@ds119445.mlab.com:19445/swendelon
 
 
 //NORMAL USER STUFF
-//Login for Normal Users
+//Login for Normal Staff Users
 router.get('/authstaffuser/:username/:password', (req, res2) => {
     var username = req.params.username;
     var password = req.params.password;
-    db.collection('users').findOne({ "username": username }, { password: 1, _id: 0 }, function (err, result) {
+    db.collection('staff_user').findOne({ "username": username }, { password: 1, _id: 0 }, function (err, result) {
         if (result == null) res2.send([{ "auth": "false1" }]);
         else {
             bcrypt.compare(password, result.password, function (err, res) {
@@ -37,10 +37,10 @@ router.get('/authstaffuser/:username/:password', (req, res2) => {
     });
 });
 
-//Register for Normal Users
-router.get('/reguser/:username/:userpassword/:useremail/:userbirthday/:userphonenumber/:role', (req, res) => {
-    bcrypt.hash(req.params.userpassword, BCRYPT_SALT_ROUNDS, function (err, hash) {
-        db.collection('users').save({ "username": req.params.username, "userpassword": hash, "useremail": req.params.useremail, "userbirthday": req.params.userbirthday, "userphonenumber": req.params.userphonenumber, "role": req.params.role }, (err, result) => {
+//Register for Normal Staff Users
+router.get('/regstaffuser/:username/:password/:role', (req, res) => {
+    bcrypt.hash(req.params.password, BCRYPT_SALT_ROUNDS, function (err, hash) {
+        db.collection('staff_user').save({ "username": req.params.username, "password": hash, "role": req.params.role }, (err, result) => {
         });
     });
 });

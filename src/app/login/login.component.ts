@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
 
   onStaffSubmit() {
-    this.authService.authUser(this.staffLoginForm.value.username, this.staffLoginForm.value.userpassword).subscribe(data => {this.results = data;
+    this.authService.authUser(this.staffLoginForm.value.username, this.staffLoginForm.value.password).subscribe(data => {this.results = data;
     if (this.results[0].auth) 
       {
         this.authService.setSecureToken(this.staffLoginForm.value.username);
