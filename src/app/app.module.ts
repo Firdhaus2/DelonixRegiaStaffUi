@@ -22,11 +22,13 @@ import { StaffAccountComponent } from './staff-account/staff-account.component';
 import { StaffAccountFormComponent } from './staff-account-form/staff-account-form.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { RegisterComponent } from './register/register.component';
+
 import {AuthserviceService} from './authservice.service'
 
 
 import { routing } from './app.routing';
-import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [

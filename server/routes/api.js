@@ -10,9 +10,9 @@ const axios = require('axios');
 var db;
 var ObjectId = require('mongodb').ObjectID;
 
-MongoClient.connect('mongodb://test2:test1234@ds129462.mlab.com:29462/imsickdb', { useNewUrlParser: true }, (err, database) => {
+MongoClient.connect('mongodb://admin:password1@ds119445.mlab.com:19445/swendelonixregia', { useNewUrlParser: true }, (err, database) => {
     if (err) return console.log(err)
-    db = database.db('imsickdb');
+    db = database.db('swendelonixregia');
 
 });
 
@@ -20,13 +20,13 @@ MongoClient.connect('mongodb://test2:test1234@ds129462.mlab.com:29462/imsickdb',
 
 //NORMAL USER STUFF
 //Login for Normal Users
-router.get('/authuser/:username/:userpassword', (req, res2) => {
+router.get('/authstaffuser/:username/:password', (req, res2) => {
     var username = req.params.username;
-    var userpassword = req.params.userpassword;
-    db.collection('users').findOne({ "username": username }, { userpassword: 1, useremail: 1, userbirthday: 1, userphonenumber: 1, _id: 0 }, function (err, result) {
-        if (result == null) res2.send([{ "auth": false }]);
+    var password = req.params.password;
+    db.collection('users').findOne({ "username": username }, { password: 1, _id: 0 }, function (err, result) {
+        if (result == null) res2.send([{ "auth": "false1" }]);
         else {
-            bcrypt.compare(userpassword, result.userpassword, function (err, res) {
+            bcrypt.compare(password, result.password, function (err, res) {
                 if (res) {
                     res2.send([{ "auth": true, "role": result.role }]);
                 } else {

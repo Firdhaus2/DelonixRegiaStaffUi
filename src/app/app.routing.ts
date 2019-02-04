@@ -17,6 +17,7 @@ import { StaffAccountComponent } from './staff-account/staff-account.component';
 import { StaffAccountFormComponent } from './staff-account-form/staff-account-form.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const appRoutes: Routes = [
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
  { path: 'StaffAccountForm', component: StaffAccountFormComponent },
  { path: 'Login', component: LoginComponent },
  { path: 'Logout', component: LogoutComponent },
+ { path: 'Register', component: RegisterComponent },
 
 
  { path: '', component: LoginComponent, pathMatch: 'full'}

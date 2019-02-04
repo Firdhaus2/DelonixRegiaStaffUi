@@ -1,18 +1,22 @@
 <div class="loginBox">
-  <h4 align=center>Staff Login</h4><br>
+  <h4 align=center>Staff Login</h4>
+  <br>
   <form [formGroup]="staffLoginForm" (ngSubmit)="onStaffSubmit(staffLoginForm)">
-      <div class="form-group row">
-        <div class="col">
-          <input type="text" class="form-control" formControlName="username" id="username" placeholder="Username">
-        </div>
+    <div class="form-group row">
+      <div class="col">
+        <input type="text" class="form-control" formControlName="username" id="username" placeholder="Username">
       </div>
-      <div class="form-group row">
-          <div class="col">
-            <input type="password" class="form-control" formControlName="password" id="password" placeholder="Password">
-          </div>
-        </div>
-        <div align=center>
-        <button type="submit" class="btn btn1 row">Login</button>
+    </div>
+    <div class="form-group row">
+      <div class="col">
+        <input type="password" class="form-control" formControlName="password" id="password" placeholder="Password">
       </div>
-      </form>
+    </div>
+    <div align=center>
+      <button type="submit" class="btn btn1 row">Login</button>
+    </div>
+    <div align=center style="padding-top: 15px;">
+      <button type="button" class="btn btn-link" routerLink="/Register">Create a Staff Account</button>
+    </div>
+  </form>
 </div>
