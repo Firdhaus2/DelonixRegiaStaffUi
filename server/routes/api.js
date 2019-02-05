@@ -38,9 +38,9 @@ router.get('/authstaffuser/:username/:password', (req, res2) => {
 });
 
 //Register for Normal Staff Users
-router.get('/regstaffuser/:username/:password/:role', (req, res) => {
+router.get('/regstaffuser/:staffAccountNumber/:username/:password/:role', (req, res) => {
     bcrypt.hash(req.params.password, BCRYPT_SALT_ROUNDS, function (err, hash) {
-        db.collection('staff_user').save({ "username": req.params.username, "password": hash, "role": req.params.role }, (err, result) => {
+        db.collection('staff_user').save({ "staffAccountNumber": req.params.staffAccountNumber, "username": req.params.username, "password": hash, "role": req.params.role }, (err, result) => {
         });
     });
 });
@@ -76,6 +76,11 @@ router.get('/authdoctor/:doctorId/:doctorPassword', (req, res2) => {
 });
 
 
+//GET (retrieve) all Staff Accounts
+router.get('/staffAccounts', function (req, res) {
+    db.collection('staff_user').find().toArray((err, results) => { res.send(results) });
+});
+
 //POST consultation
 router.post('/createConsultation/:item', (req, res) => {
     db.collection('consultations').insertOne( {"item":item} , (err, result) => {
@@ -88,10 +93,7 @@ router.post('/createConsultation/:symptom1/:symptom2/:symptom3/:symptomOthers/:a
 });
 
 
-//GET (retrieve) all consultations
-router.get('/consultations', function (req, res) {
-    db.collection('consultations').find().toArray((err, results) => { res.send(results) });
-});
+
 
 // GET (retrieve) only consultations of "username(local/session storage)"
 router.get('/consultationsUsers/:name', function (req, res) {

@@ -20,6 +20,7 @@ staffRegisterForm : FormGroup;
   ngOnInit() {
 
     this.staffRegisterForm = this.fb.group ({
+      staffAccountNumber: ['',[Validators.required]],
       username: ['', [Validators.required]],
       password: ['', [Validators.required]],
       adminCode: ['', [Validators.required, AdminCodeValidation]],
@@ -28,7 +29,7 @@ staffRegisterForm : FormGroup;
 
   }
   onStaffSubmit() {
-    this.authService.regStaffUser(this.staffRegisterForm.value.username, this.staffRegisterForm.value.password, this.staffRegisterForm.value.role).subscribe();
+    this.authService.regStaffUser(this.staffRegisterForm.value.staffAccountNumber, this.staffRegisterForm.value.username, this.staffRegisterForm.value.password, this.staffRegisterForm.value.role).subscribe();
     this.router.navigateByUrl('/Login');
     }
 }

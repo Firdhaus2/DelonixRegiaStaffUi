@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { StaffAccountsService } from '../staff-accounts.service';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-staff-account',
@@ -7,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StaffAccountComponent implements OnInit {
 
-  constructor() { }
+  staffAccounts: any = [];
+
+  constructor(private fb: FormBuilder, private staffAccountsService: StaffAccountsService, private router: Router) { 
+
+    this.staffAccountsService.getStaffAccounts().subscribe(staffAccounts => {
+      this.staffAccounts = staffAccounts;
+    });
+
+  }
 
   ngOnInit() {
   }

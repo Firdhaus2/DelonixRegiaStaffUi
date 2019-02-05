@@ -1,210 +1,212 @@
 <div class=header>
-    <h3 style="font-weight:bold;">Staff Accounts</h3>
+  <h3 style="font-weight:bold;">Staff Accounts</h3>
+</div>
+<div align=center style="width:100vh; margin:auto">
+  <div style="margin-top:20px">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width:70vh;width:70%">
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
-  <div align=center style="width:100vh; margin:auto">
-    <div style="margin-top:20px">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width:70vh;width:70%">
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-  
-  
-  <div class="container">
-    <div class=row>
-      <div class=col style="padding:0px;  height:55vh; overflow:hidden; width:100vh">
-        <div class="panel-group" id="accordion" style="overflow:auto; height:55vh;padding-right: 15px; width:100vh">
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Staff Account 1</a>
-              </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-                <br>
-                <button class="btn btn-danger">Check Out</button>
-              </div>
-            </div>
+</div>
+
+
+<div class="container">
+  <div class=row>
+    <div class=col style="padding:0px;  height:55vh; overflow:hidden; width:100vh">
+      <div class="panel-group" id="accordion" style="overflow:auto; height:55vh;padding-right: 15px; width:100vh">
+        <div class="panel panel-default" style="width:95vh" *ngFor="let staffAccount of staffAccounts">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href=#{{staffAccount.username}}>Staff Account {{staffAccount.staffAccountNumber}}</a>
+            </h4>
           </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Staff Account 2</a>
-              </h4>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse3" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default" style="width:95vh">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
-              </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-              </div>
+          <div id={{staffAccount.username}} class="panel-collapse collapse">
+            <div class="panel-body">Username: {{staffAccount.username}}
+              <br>Password:{{staffAccount.password}}
+
             </div>
           </div>
         </div>
-  
-  
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Staff Account 2</a>
+            </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="width:95vh">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Staff Account 3</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
       </div>
-      <div class=col-5 style="background-color:rgb(67,67,67)">
-        <form class="form-inline my-2 my-lg-0" style="padding-top:140px; padding-left:40px">
-          <input class="form-control mr-sm-2" type="search" placeholder="Enter Room Number" aria-label="Enter Room Number" style="width:70vh;width:70%">
-          <button class="btn btn-danger my-2 my-sm-0" type="submit" style="width:80px" routerLink="/GRecordForm">Edit</button>
-        </form>
-        <form class="form-inline my-2 my-lg-0" style="padding-top:10px; padding-left:40px">
-          <input class="form-control mr-sm-2" type="search" placeholder="Enter Room Number" aria-label="Enter Room Number" style="width:70vh;width:70%">
-          <button class="btn btn-danger my-2 my-sm-0" type="submit" style="width:80px">Delete</button>
-        </form>
-      </div>
+
+
+    </div>
+    <div class=col-5 style="background-color:rgb(67,67,67)">
+      <form class="form-inline my-2 my-lg-0" style="padding-top:140px; padding-left:40px">
+        <input class="form-control mr-sm-2" type="search" placeholder="Enter Staff Account Number" aria-label="Enter Room Number"
+          style="width:70vh;width:70%">
+        <button class="btn btn-danger my-2 my-sm-0" type="submit" style="width:80px" routerLink="/StaffAccountForm">Edit</button>
+      </form>
+      <form class="form-inline my-2 my-lg-0" style="padding-top:10px; padding-left:40px">
+        <input class="form-control mr-sm-2" type="search" placeholder="Enter Staff Account Number" aria-label="Enter Room Number"
+          style="width:70vh;width:70%">
+        <button class="btn btn-danger my-2 my-sm-0" type="submit" style="width:80px">Delete</button>
+      </form>
     </div>
   </div>
-  
-  
-  <div style="margin-left:40px" >
-      <a routerLink="/StaffAccountForm"><h4 style="color:rgb(67,67,67); font-weight:bold;"><img src="https://cdn.discordapp.com/attachments/334883989426798603/541554629285117953/icons8-plus-30.png" style="vertical-align:text-bottom">&nbsp;&nbsp;Add New Record</h4></a>
-  </div>
-  
+</div>
+
+
+<div style="margin-left:40px">
+  <a routerLink="/StaffAccountForm">
+    <h4 style="color:rgb(67,67,67); font-weight:bold;">
+      <img src="https://cdn.discordapp.com/attachments/334883989426798603/541554629285117953/icons8-plus-30.png" style="vertical-align:text-bottom">&nbsp;&nbsp;Add New Record</h4>
+  </a>
+</div>

@@ -27,7 +27,7 @@ export class AuthserviceService {
   getUserRole() {
     return localStorage.getItem("UserRole")
   }
-  regStaffUser(username: string, password: string, role: string) {
-    return this.http.get('/api/regstaffuser/' + username + "/" + password + "/"  + role);
+  regStaffUser(staffAccountNumber:string, username: string, password: string, role: string) {
+    return this.http.get('/api/regstaffuser/' + staffAccountNumber + '/' + username + "/" + password + "/"  + role);
   }
 }

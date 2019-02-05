@@ -25,6 +25,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 
 import {AuthserviceService} from './authservice.service'
+import {StaffAccountsService} from './staff-accounts.service'
 import { CustomValidator } from './custom.validator'
 
 
@@ -60,7 +61,7 @@ import { routing } from './app.routing';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [AuthserviceService, CustomValidator],
+  providers: [AuthserviceService, CustomValidator, StaffAccountsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
