@@ -25,6 +25,7 @@ export class SRecordFormComponent implements OnInit {
 
   ngOnInit() {
     this.staffRecordsForm = this.fb.group({
+      staffId:'',
       firstName:'',
       lastName:'',
       staffUsername:'',
@@ -41,7 +42,7 @@ export class SRecordFormComponent implements OnInit {
   }
 
   createStaffRecord() {
-    this.staffRecordsService.createStaffRecord(this.staffRecordsForm.value.firstName, this.staffRecordsForm.value.lastName, this.staffRecordsForm.value.staffUsername, this.staffRecordsForm.value.mobileNumber,  this.staffRecordsForm.value.homeNumber,  this.staffRecordsForm.value.streetAddress, this.staffRecordsForm.value.blockNumber ,this.staffRecordsForm.value.unitNumber, this.staffRecordsForm.value.postalCode,this.staffRecordsForm.value.country,this.staffRecordsForm.value.duty ).subscribe(staffRecords=> {
+    this.staffRecordsService.createStaffRecord(this.staffRecordsForm.value.staffId, this.staffRecordsForm.value.firstName, this.staffRecordsForm.value.lastName, this.staffRecordsForm.value.staffUsername, this.staffRecordsForm.value.mobileNumber,  this.staffRecordsForm.value.homeNumber,  this.staffRecordsForm.value.streetAddress, this.staffRecordsForm.value.blockNumber ,this.staffRecordsForm.value.unitNumber, this.staffRecordsForm.value.postalCode,this.staffRecordsForm.value.country,this.staffRecordsForm.value.duty ).subscribe(staffRecords=> {
       this.staffRecords = staffRecords;
     });
     this.router.navigateByUrl('/SRecord')

@@ -6,6 +6,14 @@
       <form [formGroup]="staffRecordsForm" (ngSubmit)="createStaffRecord(staffRecordsForm)">
         <div class="row">
           <div class="col">
+            <div class="form-group">
+              <label for="staffId" class="col col-form-label">Staff Id</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="staffId" formControlName="staffId">
+              </div>
+            </div>
+            <br>
+            <hr style="width: 80%; background-color: black;">
             <u>Name</u>
             <div class="form-group">
               <label for="firstName" class="col col-form-label">First Name</label>
@@ -18,7 +26,8 @@
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="lastName" formControlName="lastName">
               </div>
-            </div><br>
+            </div>
+            <br>
             <hr style="width: 80%; background-color: black;">
             <u>Contact</u>
             <div class="form-group">
@@ -32,7 +41,8 @@
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="hNumber" formControlName="homeNumber">
               </div>
-            </div><br>
+            </div>
+            <br>
             <hr style="width: 80%; background-color: black;">
             <u>Username</u>
             <div class="form-group">
@@ -46,7 +56,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div claxss="col">
             <u>Address</u>
             <div class="form-group">
               <label for="streetAddress" class="col col-form-label">Street Address</label>
@@ -77,20 +87,21 @@
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="country" formControlName="country">
               </div>
-            </div><br>
+            </div>
+            <br>
             <hr style="width: 80%; background-color: black;">
             <u>Duty</u>
             <div class="form-group">
               <label for="duty" class="col col-form-label">Staff Duty</label>
               <div class="col-sm-10">
-                  <input type="radio" name="duty" id="staffDuty" value="General Maintenance" formControlName="duty">General Maintenance
-                  <br>
-                  <input type="radio" name="duty" id="staffDuty" value="Room Maintenance" formControlName="duty">Room Maintenance
-                  <br>
-                  <input type="radio" name="duty" id="staffDuty" value="Estates Maintenance" formControlName="duty">Estates Maintenance
-                  <br>
-                  <input type="radio" name="duty" id="staffDuty" value="Security" formControlName="duty">Security
-                  <br>
+                <input type="radio" name="duty" id="staffDuty" value="General Maintenance" formControlName="duty">General Maintenance
+                <br>
+                <input type="radio" name="duty" id="staffDuty" value="Room Maintenance" formControlName="duty">Room Maintenance
+                <br>
+                <input type="radio" name="duty" id="staffDuty" value="Estates Maintenance" formControlName="duty">Estates Maintenance
+                <br>
+                <input type="radio" name="duty" id="staffDuty" value="Security" formControlName="duty">Security
+                <br>
               </div>
             </div>
 
@@ -99,7 +110,7 @@
         <div align=right>
           <button type="button" class="btn btn-outline-danger  row-sm-10">Discard Changes</button>
 
-          <button type="submit" class="btn btn-danger row-sm-10" >Save Changes</button>
+          <button type="submit" class="btn btn-danger row-sm-10">Save Changes</button>
         </div>
       </form>
     </div>

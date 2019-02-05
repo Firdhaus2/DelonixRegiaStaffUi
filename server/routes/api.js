@@ -88,7 +88,7 @@ router.post('/createConsultation/:item', (req, res) => {
 });
 
 //POST staff record
-router.post('/createStaffRecord/:firstName/:lastName/:staffUsername/:mobileNumber/:homeNumber/:streetAddress/:blockNumber/:unitNumber/:postalCode/:country/:duty', (req, res) => {
+router.post('/createStaffRecord/:staffId/:firstName/:lastName/:staffUsername/:mobileNumber/:homeNumber/:streetAddress/:blockNumber/:unitNumber/:postalCode/:country/:duty', (req, res) => {
     db.collection('staff_record').insertOne( req.body , (err, result) => {
     });
 });
@@ -101,10 +101,10 @@ router.get('/staffRecords', function (req, res) {
 
 
 
-// GET (retrieve) only consultations of "username(local/session storage)"
-router.get('/consultationsUsers/:name', function (req, res) {
-    var name = req.params.name;
-    db.collection('consultations').find({ "name": name }).toArray(
+// GET "search function"
+router.get('/staffRecords/:staffId', function (req, res) {
+    var staffId = req.params.staffId;
+    db.collection('staff_record').find({ "staffId": staffId }).toArray(
         (err, results) => { res.send(results) });
 });
 

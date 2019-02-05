@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 export class SRecordComponent implements OnInit {
 
   staffRecords: any = [];
+  searchStaffRecordForm: FormGroup
 
   constructor(private fb: FormBuilder, private staffRecordsService: StaffRecordsService, private router: Router) { 
 
@@ -20,6 +21,14 @@ export class SRecordComponent implements OnInit {
 }
 
   ngOnInit() {
+    this.searchStaffRecordForm = this.fb.group ({
+      staffId: ''
+      });
   }
 
+  searchStaffRecord(){
+    this.staffRecordsService.searchStaffRecords(this.searchStaffRecordForm.value.staffId).subscribe(staffRecords => {
+      this.staffRecords = staffRecords;
+    });
+  }
 }
