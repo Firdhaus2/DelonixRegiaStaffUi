@@ -93,6 +93,11 @@ router.post('/createStaffRecord/:firstName/:lastName/:staffUsername/:mobileNumbe
     });
 });
 
+//GET (retrieve) all Staff Records
+router.get('/staffRecords', function (req, res) {
+    db.collection('staff_record').find().toArray((err, results) => { res.send(results) });
+});
+
 
 
 

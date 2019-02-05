@@ -23,16 +23,25 @@
     <div class=row>
       <div class=col style="padding:0px;  height:55vh; overflow:hidden; width:100vh">
         <div class="panel-group" id="accordion" style="overflow:auto; height:55vh;padding-right: 15px; width:100vh">
-          <div class="panel panel-default" style="width:95vh">
+          <div class="panel panel-default" style="width:95vh" *ngFor="let staffRecord of staffRecords">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Staff Record 1</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#{{staffRecord.firstName}}">Staff Record XD</a>
               </h4>
             </div>
-            <div id="collapse1" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
+            <div id="{{staffRecord.firstName}}" class="panel-collapse collapse">
+              <div class="panel-body">First Name: {{staffRecord.firstName}}
+                <br>Last Name: {{staffRecord.lastName}}
+                <br>Username: {{staffRecord.staffUsername}}
+                <br>Mobile Number: {{staffRecord.mobileNumber}}
+                <br>Home Number: {{staffRecord.homeNumber}}
+                <br>Street Address: {{staffRecord.streetAddress}}
+                <br>Block Number: {{staffRecord.blockNumber}}
+                <br>Unit Number: {{staffRecord.unitNumber}}
+                <br>Postal Code: {{staffRecord.postalCode}}
+                <br>Country: {{staffRecord.country}}
+                <br>Staff Duty: {{staffRecord.duty}}
+
               </div>
             </div>
           </div>

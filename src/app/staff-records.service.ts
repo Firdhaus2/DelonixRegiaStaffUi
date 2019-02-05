@@ -12,4 +12,8 @@ export class StaffRecordsService {
     return this.http.post<any[]>('/api/createStaffRecord/' + firstName + '/' + lastName + '/' + staffUsername  + '/' + mobileNumber + '/' + homeNumber + '/' + streetAddress + '/' + blockNumber + '/' + unitNumber + '/' + postalCode + '/' + country + '/' + duty, { 'firstName': firstName, 'lastName':lastName, 'staffUsername':staffUsername, 'mobileNumber':mobileNumber,'homeNumber':homeNumber, 'streetAddress':streetAddress,'blockNumber':blockNumber,'unitNumber':unitNumber, 'postalCode':postalCode,'country':country,'duty':duty})
   }
 
+  getStaffRecords() {
+    return this.http.get<any[]>('./api/staffRecords');
+  }
+
 }
