@@ -39,9 +39,9 @@
               <label for="username" class="col col-form-label">Staff Username</label>
               <div class="col-sm-10">
                 <select class="form-control" id="username" formControlName="staffUsername">
-                  <option value="0">Select Username</option>
-                  <option value="1">Username 1</option>
-                  <option value="2">Username 2</option>
+                  <option value="">Select Username</option>
+                  <option *ngFor="let staffAccount of staffAccounts" value={{staffAccount.username}}>{{staffAccount.username}}</option>
+
                 </select>
               </div>
             </div>
