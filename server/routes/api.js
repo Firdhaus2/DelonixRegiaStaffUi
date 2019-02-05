@@ -87,8 +87,9 @@ router.post('/createConsultation/:item', (req, res) => {
     });
 });
 
-router.post('/createConsultation/:symptom1/:symptom2/:symptom3/:symptomOthers/:additionalInfo/:status/:reply/:name/:date', (req, res) => {
-    db.collection('consultations').insertOne( req.body , (err, result) => {
+//POST staff record
+router.post('/createStaffRecord/:firstName/:lastName/:staffUsername/:mobileNumber/:homeNumber/:streetAddress/:blockNumber/:unitNumber/:postalCode/:country/:duty', (req, res) => {
+    db.collection('staff_record').insertOne( req.body , (err, result) => {
     });
 });
 
