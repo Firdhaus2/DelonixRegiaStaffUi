@@ -25,18 +25,18 @@ export class SRecordFormComponent implements OnInit {
 
   ngOnInit() {
     this.staffRecordsForm = this.fb.group({
-      staffId:'',
-      firstName:'',
-      lastName:'',
-      staffUsername:'',
-      mobileNumber:'',
-      homeNumber:'',
-      streetAddress:'',
-      blockNumber:'',
-      unitNumber:'',
-      postalCode:'',
-      country:'',
-      duty:'',
+      staffId:['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+      firstName:['', [Validators.required, Validators.pattern('^[a-zA-Z]+(\s[a-zA-Z]+)?$')]],
+      lastName:['', [Validators.required, Validators.pattern('^[a-zA-Z]+(\s[a-zA-Z]+)?$')]],
+      staffUsername:['', [Validators.required]],
+      mobileNumber:['', [Validators.required, Validators.pattern('(^[0-9]).{7,12}')]],
+      homeNumber:['', [Validators.required, Validators.pattern('(^[0-9]).{7,12}')]],
+      streetAddress:['', [Validators.required]],
+      blockNumber:['', [Validators.required]],
+      unitNumber:['', [Validators.required]],
+      postalCode:['', [Validators.required, Validators.pattern('(^[0-9]).{5}')]],
+      country:['', [Validators.required]],
+      duty:['', [Validators.required]],
     });
     
   }

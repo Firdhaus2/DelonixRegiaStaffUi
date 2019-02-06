@@ -22,7 +22,7 @@ export class SRecordComponent implements OnInit {
 
   ngOnInit() {
     this.searchStaffRecordForm = this.fb.group ({
-      staffId: ''
+      staffId: ['', [Validators.pattern('^[0-9]*$')]]
       });
   }
 
