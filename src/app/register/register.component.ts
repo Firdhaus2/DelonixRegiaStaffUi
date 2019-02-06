@@ -31,5 +31,6 @@ staffRegisterForm : FormGroup;
   onStaffSubmit() {
     this.authService.regStaffUser(this.staffRegisterForm.value.staffAccountNumber, this.staffRegisterForm.value.username, this.staffRegisterForm.value.password, this.staffRegisterForm.value.role).subscribe();
     this.router.navigateByUrl('/Login');
+    alert("Staff account created!")
     }
 }
