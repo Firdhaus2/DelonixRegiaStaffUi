@@ -18,12 +18,15 @@ export class SRecordFormComponent implements OnInit {
   staffAccounts: any =[];
 
   constructor(private fb: FormBuilder, private staffRecordsService: StaffRecordsService, private router: Router, private staffAccountsService: StaffAccountsService) {
-    this.staffAccountsService.getStaffAccounts().subscribe(staffAccounts => {
-      this.staffAccounts = staffAccounts;
-    });
+
    }
 
   ngOnInit() {
+
+    this.staffAccountsService.getStaffAccounts().subscribe(staffAccounts => {
+      this.staffAccounts = staffAccounts;
+    });
+
     this.staffRecordsForm = this.fb.group({
       staffId:['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       firstName:['', [Validators.required, Validators.pattern('^[a-zA-Z]+(\s[a-zA-Z]+)?$')]],
