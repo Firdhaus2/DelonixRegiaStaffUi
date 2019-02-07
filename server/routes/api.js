@@ -46,34 +46,8 @@ router.get('/regstaffuser/:staffAccountNumber/:username/:password/:role', (req, 
 });
 
 
-//DOCTOR STUFF
-
-//Register for Doctors
-router.get('/regdoctor/:doctorId/:doctorPassword/:role', (req, res) => {
-    bcrypt.hash(req.params.doctorPassword, BCRYPT_SALT_ROUNDS, function (err, hash) {
-        db.collection('doctorusers').save({ "doctorId": req.params.doctorId, "doctorPassword": hash, "role": req.params.role }, (err, result) => {
-        });
-    });
-});
 
 
-//Login for Doctors
-router.get('/authdoctor/:doctorId/:doctorPassword', (req, res2) => {
-    var doctorId = req.params.doctorId;
-    var doctorPassword = req.params.doctorPassword;
-    db.collection('doctorusers').findOne({ "doctorId": doctorId }, { doctorPassword: 1, _id: 0 }, function (err, result) {
-        if (result == null) res2.send([{ "auth": false }]);
-        else {
-            bcrypt.compare(doctorPassword, result.doctorPassword, function (err, res) {
-                if (res) {
-                    res2.send([{ "auth": true, "role": result.role }]);
-                } else {
-                    res2.send([{ "auth": false }]);
-                }
-            });
-        }
-    });
-});
 
 
 //GET (retrieve) all Staff Accounts
@@ -81,11 +55,7 @@ router.get('/staffAccounts', function (req, res) {
     db.collection('staff_user').find().toArray((err, results) => { res.send(results) });
 });
 
-//POST consultation
-router.post('/createConsultation/:item', (req, res) => {
-    db.collection('consultations').insertOne( {"item":item} , (err, result) => {
-    });
-});
+
 
 //POST staff record
 router.post('/createStaffRecord/:staffId/:firstName/:lastName/:staffUsername/:mobileNumber/:homeNumber/:streetAddress/:blockNumber/:unitNumber/:postalCode/:country/:duty', (req, res) => {
@@ -108,23 +78,7 @@ router.get('/staffRecords/:staffId', function (req, res) {
         (err, results) => { res.send(results) });
 });
 
-//UPDATE ZZZ
-router.route('/replyConsultation/:_id/:reply/:status').put(function (req, res) {
-    db.collection('consultations').updateOne
-    ({ "_id": ObjectId(req.params._id) }, { $set: {reply:req.params.reply, status:req.params.status} });
-});
 
-//Filter Resolved
-router.get('/resolved', function (req, res) {
-    db.collection('consultations').find({ "status": "resolved" }).toArray(
-        (err, results) => { res.send(results) });
-});
-
-//Filter Unresolved
-router.get('/unresolved', function (req, res) {
-    db.collection('consultations').find({ "status": "unresolved" }).toArray(
-        (err, results) => { res.send(results) });
-});
 
 module.exports = router;
 
