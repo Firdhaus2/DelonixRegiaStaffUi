@@ -28,15 +28,15 @@ export class LoginComponent implements OnInit {
     this.authService.authUser(this.staffLoginForm.value.username, this.staffLoginForm.value.password).subscribe(data => {this.results = data;
     if (this.results[0].auth) 
       {
+        alert("Login Successful!");
         this.authService.setSecureToken(this.staffLoginForm.value.username);
         this.authService.setUserRole(this.results[0].role);
         this.router.navigateByUrl('/Home');
-        alert("Login Successful!");
+        
 
       }
     else
       {
-        this.userIncorrect = true;
         alert("Incorrect user details")
       }
     });

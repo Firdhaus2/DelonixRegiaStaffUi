@@ -24,7 +24,7 @@ router.get('/authstaffuser/:username/:password', (req, res2) => {
     var username = req.params.username;
     var password = req.params.password;
     db.collection('staff_user').findOne({ "username": username }, { password: 1, _id: 0 }, function (err, result) {
-        if (result == null) res2.send([{ "auth": "false1" }]);
+        if (result == null) res2.send([{ "auth": false }]);
         else {
             bcrypt.compare(password, result.password, function (err, res) {
                 if (res) {
