@@ -1,9 +1,6 @@
 .requestCol {
     margin-top:50px;
 
-    border-width:1px;
-    border-style:solid;
-    border-color:black;
 
     height:70vh;
     
@@ -11,9 +8,7 @@
 
 .requestCol1 {
 
-    border-width:1px;
-    border-style:solid;
-    border-color:black;
+
 
     height:70vh;
     width:75vh;   
@@ -23,9 +18,7 @@
 .housekeepingCol{
     margin-top:50px;
 
-    border-width:1px;
-    border-style:solid;
-    border-color:black;
+
 
     height:70vh;
     
